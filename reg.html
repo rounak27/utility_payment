@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Registration Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="form-container">
+		<h2>Registration Form</h2>
+		<form>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			
+			<label for="address">Address:</label>
+			<input type="text" id="house-number" name="house-number" placeholder="House No." required>
+			<input type="text" id="street" name="street" placeholder="Street" required>
+			<input type="text" id="ward" name="ward" placeholder="Ward" required>
+			<input type="text" id="city" name="city" placeholder="City" required>
+			<input type="text" id="district" name="district" placeholder="District" required>
+			<input type="text" id="state" name="state" placeholder="State" required>
+			
+			<label for="tel-no">Telephone No:</label>
+			<input type="tel" id="tel-no" name="tel-no" required>
+			
+			<label for="mob-no">Mobile No:</label>
+			<input type="tel" id="mob-no" name="mob-no" required>
+			
+			<label for="citizenship-no">Citizenship No:</label>
+			<input type="text" id="citizenship-no" name="citizenship-no" required>
+			
+			<label for="customer-no">Customer No:</label>
+			<input type="text" id="customer-no" name="customer-no">
+			
+			<label for="existing-customer">Already a customer?</label>
+			<input type="checkbox" id="existing-customer" name="existing-customer">
+			
+			<button type="submit">Submit</button>
+		</form>
+	</div>
+	
+	<script src="script.js"></script>
+</body>
+</html>

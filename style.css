@@ -1,0 +1,67 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #3366cc;
+    margin-bottom: 0.5em;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5em;
+    color: #3366cc;
+  }
+  
+  input[type="text"], input[type="tel"], input[type="number"], select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    margin-bottom: 1em;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 0.5em;
+  }
+  
+  button[type="submit"] {
+    background-color: #3366cc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #254b8c;
+  }
+  
+  .error-message {
+    color: #cc0000;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+  }
+  
+  .success-message {
+    color: #008000;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+  }
+  /* Sign IN */
+  
+  
