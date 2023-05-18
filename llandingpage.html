@@ -26,17 +26,20 @@
 		<div class="right">
 		<h5>Login</h5>
 		<p>Don't have an account? <a href="/reg.html">Creat Your Account</a> it takes less than a minute</p>
-		<div class="inputs">
-			<input type="text" placeholder="user name">
+		<form method="post"  action="login.php">
+			<div class="inputs">
+			<input type="text" placeholder="user name" value="uname" name="uname">
 			<br>
-			<input type="password" placeholder="password">
+			<input type="password" placeholder="password" value="pass" name="pass">
 		</div>
+		
 			
 			<br><br>
 			
 	
 			<br>
-			<button>Login</button>
+			<input type="submit" value="Login"/>
+		</form>
 	</div>
 	
 </div>

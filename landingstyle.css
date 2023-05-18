@@ -108,7 +108,7 @@ body {
     margin-right: 7px;
     width: auto;
   }
-  .box-form .right button {
+  .box-form .right input[type="submit"] {
     float:right;
     color: #fff;
     font-size: 16px;

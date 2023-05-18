@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Info</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for My Info page */
+        .myinfo-container {
+            padding: 40px;
+        }
+
+        .myinfo-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .myinfo-details {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .myinfo-label {
+            font-weight: bold;
+            width: 150px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-primary py-4">
+        <nav class="container d-flex justify-content-between align-items-center bg-primary">
+            <a href="alt.html" class="text-white text-2xl font-weight-bold">Water Supply Project</a>
+            <ul class="nav">
+                <li class="nav-item"><a href="myinfo.html" class="nav-link text-white">My Info</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">Bill Payment</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">Billing History</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">Submit Complaint</a></li>
+                <li class="nav-item"><a href="#" class="nav-link text-white">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container myinfo-container">
+        <h2 class="myinfo-title">My Info</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="myinfo-details">
+                    <span class="myinfo-label">Name:</span>
+                    <span id="name"></span>
+                </div>
+                <div class="myinfo-details">
+                    <span class="myinfo-label">Address:</span>
+                    <span id="address"></span>
+                </div>
+                <div class="myinfo-details">
+                    <span class="myinfo-label">Phone Number:</span>
+                    <span id="phoneNumber"></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="myinfo-details">
+                    <span class="myinfo-label">Connection Type:</span>
+                    <span id="connectionType"></span>
+                </div>
+                <div class="myinfo-details">
+                    <span class="myinfo-label">Billing Address:</span>
+                    <span id="billingAddress"></span>
+                </div>
+                <div class="myinfo-details">
+                    <span class="myinfo-label">Account Balance:</span>
+                    <span id="accountBalance"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add more details as needed -->
+
+        <script>
+            // Example JavaScript code to populate user information
+            document.getElementById("name").innerText = "John Doe";
+            document.getElementById("address").innerText = "123 Street, City";
+            document.getElementById("phoneNumber").innerText = "+1 123-456-7890";
+            document.getElementById("connectionType").innerText = "Residential";
+            document.getElementById("billingAddress").innerText = "456 Avenue, City";
+            document.getElementById("accountBalance").innerText = "$100.00";
+
+            // Add more JavaScript logic as needed
+        </script>
+    </div>
+</body>
+</html>
