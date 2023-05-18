@@ -2,10 +2,14 @@
 	$uname = $_POST['uname'];
 	$pass =$_POST['pass'];
 	$host="localhost";
+	$db="kukl";
 	$username="root";
 	$password="";
-	$db="kukl";
-
+	// $db="kukl";
+	// $host="sql102.hyperphp.com";
+	// $username="hp_34232806";
+	// $password="28Chaitra@9860113658";
+	// $db="hp_34232806_kukl";
 	$conn = mysqli_connect($host, $username,$password,$db);
 	if(!$conn){
 		echo("Error while connection");
@@ -15,7 +19,8 @@
 		if(mysqli_num_rows($result)>0){
 			header("Location: alt.html");
 		}else{
-			header("Location: llandingpage.html");
+			echo "<script>alert('Username or password is incorrect. Please try again.'); window.location.href = 'login.html';</script>";
+			
 		}
 		
 	}
