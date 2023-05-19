@@ -8,7 +8,7 @@
 	// $db="kukl";
 	// $host="sql102.hyperphp.com";
 	// $username="hp_34232806";
-	// $password="28Chaitra@9860113658";
+	// $password="9860113658";
 	// $db="hp_34232806_kukl";
 	$conn = mysqli_connect($host, $username,$password,$db);
 	if(!$conn){
