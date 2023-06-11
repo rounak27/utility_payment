@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customer Registration</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css">
+	<style>
+		.error {
+			color: red;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"] {
+			background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 100%);
+			border-radius: 4px;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+			border: none;
+			height: 40px;
+			padding: 10px;
+			font-size: 16px;
+			color: #555555;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		select {
+			background: linear-gradient(to bottom, #ffffff 0%, #f1f1f1 100%);
+			border-radius: 4px;
+			box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+			border: none;
+			height: 40px;
+			padding: 10px;
+			font-size: 16px;
+			color: #555555;
+			width: 100%;
+			margin-bottom: 20px;
+		}
+
+		button {
+			background-color: #007bff;
+			color: #ffffff;
+			border-radius: 4px;
+			padding: 10px;
+			font-size: 16px;
+			border: none;
+		}
+
+		button:hover {
+			background-color: #0069d9;
+		}
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+
+</head>
+<body>
+	<div class="container mx-auto px-4 py-8">
+		<h2 class="text-2xl font-bold mb-8">Customer Registration</h2>
+		<form method="post" action="process.php" onsubmit="return validateForm()">
+			<div class="mb-4">
+				<label class="block text-gray-700 font-bold mb-2" for="first_name">First Name *</label>
+				<input type="text" id="first_name" name="first_name" >
+			</div>
+
+			<div class="mb-4">
+				<label class="block text-gray-700 font-bold mb-2" for="middle_name">Middle Name</label>
+				<input type="text" id="middle_name" name="middle_name">
+			</div>
+
+			<div class="mb-4">
+				<label class="block text-gray-700 font-bold mb-2" for="last_name">Last Name *</label>
+				<input type="text" id="last_name" name="last_name" >
+			</div>
+
+			<div class="mb-4">
+				<label class="block text-gray-700 font-bold mb-2" for="ward">Ward</label>
+				<input type="text" id="ward" name="ward">
+			</div>
+
+			<div class="mb-4">
+				<label class="block text-gray-700 font-bold mb-2" for="city">City</label>
+				<input type="text" id="city" name="city">
+			</div>
+
+			<div class="mb-4">
+				<label class="block text-gray-700 font-bold mb-2" for="district">District *</label>
+				<select id="district" name="district" >
+					<option value="">Select District</option>
+					<option value="Kathmandu">Kathmandu</option>
+					<option value="Bhaktapur">Bhaktapur</option>
+					<option value="Lalitpur">Lalitpur</option>
+					<!-- Add more options here -->
+				</select>
+			</div>
+
+			<div class="mb-4">
+				<label class="block text-gray-700 font-bold mb-2" for="state">State *</label>
+				<select id="state" name="state" >
+					<option value="">Select State</option>
+					<option value="Bagmati">Bagmati</option>
+					<option value="Gandaki">Gandaki</option>
+					<option value="Province No. 1">Province No. 1</option>
+				</select>
+			</div>
+
+			<div class="mb-4">
+				<label class="block text-gray-700 font-bold mb-2" for="citizenship_number">Citizenship Number *</label>
+				<input type="text" id="citizenship_number" name="citizenship_number" >
+			</div>
+
+			<div class="mb-4">
+				<label class="block text-gray-700 font-bold mb-2" for="phone_number">Phone Number *</label>
+				<input type="text" id="phone_number" name="phone_number" >
+			</div>
+
+			<div id="error-message" class="error"></div>
+
+			<button type="submit" class="mt-4">Register</button>
+		</form>
+		<button onclick="generatePDF()" class="mt-4">Download PDF</button>
+	</div>
+
+	<script>
+		function validateForm() {
+			var firstName = document.forms[0]["first_name"].value;
+			var lastName = document.forms[0]["last_name"].value;
+			var district = document.forms[0]["district"].value;
+			var state = document.forms[0]["state"].value;
+			var citizenshipNumber = document.forms[0]["citizenship_number"].value;
+			var phoneNumber = document.forms[0]["phone_number"].value;
+
+			if (firstName == "" || lastName == "" || district == "" || state == "" || citizenshipNumber == "" || phoneNumber == "") {
+				document.getElementById("error-message").innerHTML = "Please fill out all required fields.";
+				return false;
+			}
+		}
+
+		function generatePDF() {
+			var element = document.querySelector('.container');
+			html2pdf().from(element).save();
+		}
+	</script>
+</body>
+</html>

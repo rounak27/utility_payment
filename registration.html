@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page in Online KUKL</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="./loginpage.css">
+  <script>
+    function validateForm() {
+      var password = document.forms["registrationForm"]["passw"].value;
+      var confirmPassword = document.forms["registrationForm"]["cpassw"].value;
+      var cid = document.forms["registrationForm"]["custid"].value;
+      var alertDiv = document.querySelector('.error');
+
+      if (password.length < 6) {
+        alertDiv.innerText = "Password should be at least 6 characters long.";
+        return false;
+      }
+
+      if (cid.length !== 4) {
+        alertDiv.innerText = "Customer ID should be 4 digits.";
+        return false;
+      }
+
+      if (password !== confirmPassword) {
+        alertDiv.innerText = "Confirm Password should match the Password.";
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="box-form">
+    <div class="left">
+      <div class="overlay">
+        <img src="https://kathmanduwater.org/wp-content/uploads/2017/03/kukl_logo.png" alt="" srcset=""/>
+        <h1> Welcome to online KUKL </h1>
+        <p>This is the online portal of Kathmandu Upatyaka Khanepani Limited.</p>
+        <p>Login or register to explore the services directly from your own hand.</p>
+		<p>1. The Customer number is in the book of KUKL it is 4 digit eg. 9***</p>
+		<p>2. Enter the customer name, phonenumber , password to get register.</p>
+
+
+      </div>
+    </div>
+    <div class="right">
+      <h5>Register</h5>
+      <h5>Online</h5>
+      <p><a href="./reg.html">Be the Customer of KUKL?</a> Click to submit the application </p>
+      <form method="post" action="registration.php" name="registrationForm" onsubmit="return validateForm()">
+        <div class="inputs">
+          <input type="text" placeholder="Customer ID" name="custid" required>
+          <br>
+          <input type="text" placeholder="Customer Name" name="custname" required>
+          <br>
+          <input type="text" placeholder="Phone Number" name="mobnum" required>
+          <br>
+          <input type="password" placeholder="Password" name="passw" required>
+          <br>
+          <input type="password" placeholder="Confirm Password" name="cpassw" required>
+          <br>
+        </div>
+        <br>
+        <div class="error"></div> <!-- Added error div with bootstrap class -->
+        <br>
+        <br>
+        <input type="submit" value="Register Now"/>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

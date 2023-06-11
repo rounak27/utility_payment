@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form to PDF</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+        
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        }
+        
+        #output {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 10px;
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+        }
+        
+        #pdfButton {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+</head>
+<body>
+    <h1>Form to PDF</h1>
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <button type="submit">Preview</button>
+    </form>
+    
+    <div id="output"></div>
+    
+    <button id="pdfButton" onclick="generatePDF()">Download PDF</button>
+    
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            
+            // Display form values on the page
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '<h2>Form Values:</h2>' +
+                                  '<p><strong>Name:</strong> ' + name + '</p>' +
+                                  '<p><strong>Email:</strong> ' + email + '</p>';
+            
+            // Show the "Download PDF" button
+            document.getElementById('pdfButton').style.display = 'block';
+        });
+        
+        function generatePDF() {
+            var element = document.getElementById('output');
+            html2pdf()
+                .set({ margin: 0.5, filename: 'form_output.pdf', image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2 } })
+                .from(element)
+                .save();
+        }
+    </script>
+</body>
+</html>
