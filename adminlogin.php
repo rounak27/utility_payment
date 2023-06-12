@@ -21,7 +21,7 @@ session_start();
             $_SESSION['adminid'] = $adid;
 		//	$sql="SELECT cname from customer where cid='".$cusid."';";
 		//$res=mysqli_query($conn,$sql); 
-			header("Location: adminpage.php");
+			header("Location: adminpagenotice.php");
 		}else{
             $_SESSION['message'] = "Invalid username or password";
             header("Location: adminloginpage.php");

@@ -18,6 +18,6 @@
                 </div>
             </div>
         </div>
-        <p class="text-center mb-0">Water Supply Project &copy; 2023. All rights reserved.</p>
+        <p class="text-center mb-0">Kathmandu Uptyaka Khanepani Limmited &copy; 2080. All rights reserved.</p>
     </footer>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>

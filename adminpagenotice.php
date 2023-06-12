@@ -1,6 +1,15 @@
 <head><link rel="stylesheet" href="try.css">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://kit.fontawesome.com/2705d88985.js" crossorigin="anonymous"></script>
+
 <style>
+      @import url('https://fonts.googleapis.com/css?family=Signika:400,700');       
+    body{
+        background-color: #f2f2f2;
+        font-family: signika; 
+        margin: 0px;
+        padding: 0px;
+    }
     form {
         margin: 0 auto;
         width: 800px;

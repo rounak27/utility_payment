@@ -46,6 +46,7 @@ include("nav.php")
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2>Notice Board</h2>
+                    <p>For new, notice, scroll down<p>
                 </div>
             </div>
             <div class="row">
