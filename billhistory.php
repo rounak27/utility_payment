@@ -12,10 +12,7 @@
  <style>
     @import url('https://fonts.googleapis.com/css?family=Signika:400,700');
         /* Custom CSS for My Info page */
-        body {
-    padding: 20px;
-    font-family: signika;
-}
+     
 header{
     background-color: #f8f8f8;
 }
@@ -25,6 +22,7 @@ h1 {
 }
 body{
     background-color: #f8f8f8;
+ font-family:signika;
 }
 
 .billing-record {
@@ -101,6 +99,8 @@ if (mysqli_num_rows($result) > 0) {
         $previousReading = $reading;
 
         // Display the data dynamically within the HTML structure
+        echo '<div class="col-lg-12">';
+
         echo '<div class="billing-record">';
         echo '<div class="billing-date">' . $date . '</div>';
         echo '<div class="billing-details">';
@@ -108,6 +108,8 @@ if (mysqli_num_rows($result) > 0) {
         echo '<div class="billing-units">Units Consumed: ' . $unitsConsumed . ' units</div>';
         echo '<div class="billing-amount">Amount: Rs. ' . $amount ;
         if($amount==100){echo'(Minimum Charge)';}
+        echo '</div>';
+
         echo '</div>';
         echo '</div>';
         echo '</div>';

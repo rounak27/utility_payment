@@ -31,7 +31,7 @@ $result = mysqli_query($conn, $query);
         background-color: #f2f2f2;
         font-family: signika; 
         margin: 0px;
-        padding: 20px;
+       
          }
         .container{
             margin-top: 50px;

@@ -20,8 +20,9 @@
 	</div>
 		<div class="right">
 		<h5>Login</h5>
-<p> <a href="registration.html">Create Your Online Account</a>||<a href="alt.html">Be the New customer of KUKL?</a> ||<a href="adminloginpage.php">Emolpyee Login</a> </p>
-
+<p> <a href="registration.html">Create Your Online Account</a>||<a href="customer_registration.html">Be the New customer of KUKL?</a> ||<a href="adminloginpage.php">Emolpyee Login</a> </p>
+<br>
+	<a href="tracking.php">Tracking Information</a> 
 		<form method="post"  action="login.php" >
 			<div class="inputs">
 			<input type="text" placeholder="Customer id*" name="cid" id="customer-id" > 

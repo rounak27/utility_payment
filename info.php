@@ -104,7 +104,6 @@ include("nav.php")
                
             </div>
     </div>
-        <!-- Add more details as needed -->
         <?php
 include("footer.php")
 ?></body>

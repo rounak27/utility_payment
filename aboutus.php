@@ -19,11 +19,11 @@
  <script src="https://kit.fontawesome.com/2705d88985.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Signika:400,700');
-        body {
+        /* body {
             padding: 20px;
             font-family: signika;
             background-color: #f8f8f8;
-        }
+        } */
         /* Custom CSS */
         .container {
             margin-top: 50px;
@@ -43,7 +43,7 @@
 
        
         /* footer css */
-        footer{
+        /* footer{
             background-color: rgba(22, 34, 123, 0.5);
         }
 
@@ -66,7 +66,7 @@
         .company-image {
             width: 300px;
             height: 100px;
-        }
+        } */
 
         
     </style>

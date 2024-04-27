@@ -1,4 +1,47 @@
-    <!--Footer-->
+   <head>
+    <style>
+.footer {
+    background-color: rgb(4, 117, 230);
+    color: black;
+    padding: 20px;
+}
+
+.footer a {
+    color: #f8f9fa;
+}
+
+.footer a:hover {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-icons li:last-child {
+    margin-right: 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    color: #f8f9fa;
+    background-color: #343a40;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+}
+</style>
+   </head>
+   <!--Footer-->
     <footer class="footer">
         <div class="container">
             <div class="row">

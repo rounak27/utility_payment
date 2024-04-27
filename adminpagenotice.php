@@ -16,8 +16,6 @@
     }
 </style>
 </head>
-
-
 <header>
   <img src="KUKL.jpg" width="500" height="120" class="center">
 </header>
@@ -27,10 +25,12 @@
     $_SESSION['message'] = "You must be logged in to access this page";
     header("Location: adminloginpage.php");
     exit();
-  }
+}
+?>
 
-  ?>
-
+ <?php
+ include("adminnav.php")
+ ?>
 <main class="bg-light py-5">
     <section class="notice-board">
         <div class="container">
@@ -42,7 +42,6 @@
                              <a href="createnotice.php" class="btn btn-primary">Create</a>
             </div>
         </div>
-           
 
             <div class="row">
                 <div class="col-lg-12">
@@ -93,7 +92,3 @@
     </section>
 </main>
 
-
-<?php
-include("adminnav.php")
-?>

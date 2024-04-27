@@ -82,17 +82,16 @@ div.Meter{
             exit();
         }
 
-        // Calculate units consumed
-        $units_consumed = $current_reading - $previous_reading;
+     // Calculate units consumed
+     $units_consumed = $current_reading - $previous_reading;
 
-        // Calculate bill amount
-        if ($units_consumed <= 500) {
-            $bill_amount = 100;
-        } else {
-            $extra_units = $units_consumed % 500;
-            $bill_amount = 125 + ceil($extra_units / 500) * 125;
-        }
-
+     // Calculate bill amount
+     if ($units_consumed < 500) {
+         $bill_amount = 100;
+     } else {
+         $extra_units = $units_consumed - 500;
+         $bill_amount = 100 + ceil($extra_units / 500) * 125;
+     }
         // Display bill amount
         echo '<div class="main"><h2>Your Total Bill</h2>';
         echo '<div class= "Meter"';

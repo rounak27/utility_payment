@@ -1,4 +1,5 @@
-
+<head><link rel="stylesheet" href="try.css">
+</head>
 <!--nav-->
 
 <nav class="main-menu">
@@ -21,13 +22,29 @@
          
        </li>
        
-    
+       <li class="has-subnav">
+           <a href="billinghistorysearch.php">
+               <i class="fa fa-history"></i>
+               <span class="nav-text">
+                   Billing history
+               </span>
+           </a>
+          
+       </li>
        
        <li>
            <a href="admincomplainview.php">
                <i class="fa fa-light fa-user-pen"></i>
                <span class="nav-text">
                    Complain
+               </span>
+           </a>
+       </li>
+       <li>
+           <a href="admincheck.php">
+               <i class="fa fa-light fa-user-pen"></i>
+               <span class="nav-text">
+                   Customer request
                </span>
            </a>
        </li>

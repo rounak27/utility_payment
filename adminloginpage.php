@@ -31,7 +31,9 @@
                                 <label class="form-control-label">PASSWORD</label>
                                 <input type="password" class="form-control" i name="pass">
                             </div>
-
+                            <div class="col-lg-12 loginbttm">
+                                <a href="./loginpage.php">Customer Login</a>
+                            </div>
                             <div class="col-lg-12 loginbttm">
                                 <div class="col-lg-6 login-btm login-text">
                                 <?php
